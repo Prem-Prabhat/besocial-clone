@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Default Light Theme */
+    --background: 0 0% 100%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 214 100% 41%;      /* Amity Brand Blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 83% 54%;      /* Amity Orange/Gold */
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 35 83% 54%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    /* Amity Dark Theme Colors */
+    --background: 222 47% 11%;    /* Very Dark Slate Blue */
+    --foreground: 210 20% 92%;
+
+    --card: 217 33% 17%;          /* Slate 800 */
+    --card-foreground: 210 20% 92%;
+
+    --popover: 217 33% 17%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 214 100% 41%;      /* Amity Brand Blue */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 35 83% 54%;      /* Amity Orange/Gold */
+    --secondary-foreground: 0 0% 10%;
+
+    --muted: 215 25% 27%;         
+    --muted-foreground: 215 15% 65%;
+
+    --accent: 215 25% 27%;
+    --accent-foreground: 210 20% 92%;
+
+    --border: 215 25% 27%;
+    --input: 215 25% 27%;
+    --ring: 35 83% 54%;
+
+    /* Sidebar Specific Overrides */
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 215 15% 65%;
+    --sidebar-primary: 35 83% 54%;
+    --sidebar-primary-foreground: 0 0% 10%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 20% 92%;
+    --sidebar-border: 215 25% 27%;
+    --sidebar-ring: 35 83% 54%;
+
+    --glass: 217 33% 17% / 0.6;
+    --glow: 35 83% 54%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-xl border border-border/50 rounded-xl;
+  }
+
+  .glass-hover {
+    @apply transition-all duration-300 hover:bg-card/80 hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5;
+  }
+
+  .glow-text {
+    text-shadow: 0 0 20px hsl(var(--primary) / 0.4);
+  }
+
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary) / 0.8));
+  }
+
+  .gradient-secondary {
+    background: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary) / 0.8));
+  }
+
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--muted)) transparent;
+  }
+}
