@@ -28,7 +28,7 @@ This prototype features a robust front-end architecture designed for scalability
 
 ### 1. Data Fetching & State Management (React Query)
 Instead of relying on fragile `useEffect` calls, the app heavily utilizes **TanStack Query (React Query)** in the `useCommunity.ts` custom hooks.
-- **`useGroups`**: Fetches community categories from the live Amity API (`/api/community/{id}/groups`). React Query caches this data, eliminating redundant network requests when switching pages.
+- **`useGroups`**: Fetches community categories from the live Amity API (`______________`). React Query caches this data, eliminating redundant network requests when switching pages.
 - **`useHighlightedPosts`**: Fetches the featured "Carousel" posts data mapped to the top banner.
 - **`usePosts` (Infinite Scroll)**: Uses `useInfiniteQuery` combined with `react-intersection-observer` (applied at the bottom of the feed) to automatically trigger `fetchNextPage()` when the user scrolls near the end, providing a seamless "infinite" feed experience.
 
