@@ -55,7 +55,7 @@ To simulate application feel without needing a backend database:
 - **Smart Grouping (Sidebar):** Left navigation dynamically fetches and filters "Community Groups" (Academics, Masters Feed) and cleverly truncates the list with a dummy login prompt for guest users.
 - **Right Sidebar Widgets:** Modular components containing platform guidelines, events/webinar banners, and course advertisements.
 - **404 Animated Space:** An engaging "Lost in Space" animated 404 proxy page built with `framer-motion`, effectively catching all stray routes with a clear prototype disclaimer.
-
+- **Focus:** Frontend architecture & UX performance optimization.
 ## 🛠️ Tech Stack
 
 - **Framework:** React 18 + Vite
